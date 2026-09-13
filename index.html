@@ -10,97 +10,123 @@
 <meta property="og:type" content="website">
 <meta name="p:domain_verify" content="a16f79850f9a269ec425f0312d1d788a">
 <style>
-  :root{
-    --navy:#2F6B4F; --gold:#C7DACD; --cream:#F5F6F1;
-    --ink:#2B2B2B; --mute:#6B6B6B; --rule:#D5DAD3; --card:#FFFFFF;
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --cream:#14181f; --ink:#eae6dd; --mute:#9aa1ad; --rule:#2b323d; --card:#1b212b;
-    }
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0; background:var(--cream); color:var(--ink);
-    font:17px/1.6 ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  }
-  header{background:var(--navy); color:#F5F6F1; padding:52px 20px 44px; text-align:center}
-  header .kicker{color:var(--gold); font-weight:700; letter-spacing:.14em; font-size:13px; text-transform:uppercase}
-  header h1{margin:14px auto 10px; font-size:clamp(28px,5vw,44px); line-height:1.15; max-width:16ch}
-  header p{margin:0 auto; max-width:46ch; color:#CBD8CF; font-size:17px}
-  .wrap{max-width:820px; margin:0 auto; padding:0 20px 64px}
-  .card{
-    background:var(--card); border:1px solid var(--rule); border-radius:12px;
-    padding:28px; margin:-28px 0 0; box-shadow:0 2px 14px rgba(0,0,0,.06);
-  }
-  .btns{display:flex; flex-wrap:wrap; gap:12px; margin:22px 0 6px}
-  .btn{
-    flex:1 1 240px; display:block; text-align:center; text-decoration:none;
-    padding:15px 18px; border-radius:9px; font-weight:700; font-size:16px;
-  }
-  .btn.primary{background:var(--navy); color:#F5F6F1}
-  .btn.secondary{background:transparent; color:var(--navy); border:2px solid var(--navy)}
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]) .btn.primary{background:var(--gold); color:#14181f}
-    :root:not([data-theme="light"]) .btn.secondary{color:var(--gold); border-color:var(--gold)}
-  }
-  .note{color:var(--mute); font-size:14.5px; margin:10px 0 0}
-  h2{font-size:20px; margin:38px 0 12px}
-  ul{margin:0; padding-left:20px}
-  li{margin:7px 0}
-  .shot{width:100%; height:auto; border:1px solid var(--rule); border-radius:8px; margin-top:12px}
-  .shop{border-top:1px solid var(--rule); margin-top:40px; padding-top:26px}
-  .shop a{color:var(--navy); font-weight:700}
-  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .shop a{color:var(--gold)}}
-  footer{color:var(--mute); font-size:14px; text-align:center; padding:26px 20px 40px}
+:root{
+--navy:#2F6B4F; --gold:#C7DACD; --cream:#F5F6F1;
+--ink:#2B2B2B; --mute:#6B6B6B; --rule:#D5DAD3; --card:#FFFFFF;
+}
+@media (prefers-color-scheme: dark){
+:root:not([data-theme="light"]){
+--cream:#14181f; --ink:#eae6dd; --mute:#9aa1ad; --rule:#2b323d; --card:#1b212b;
+}
+}
+*{box-sizing:border-box}
+body{
+margin:0; background:var(--cream); color:var(--ink);
+font:17px/1.6 ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+header{background:var(--navy); color:#F5F6F1; padding:52px 20px 44px; text-align:center}
+header .kicker{color:var(--gold); font-weight:700; letter-spacing:.14em; font-size:13px; text-transform:uppercase}
+header h1{margin:14px auto 10px; font-size:clamp(28px,5vw,44px); line-height:1.15; max-width:16ch}
+header p{margin:0 auto; max-width:46ch; color:#CBD8CF; font-size:17px}
+.wrap{max-width:820px; margin:0 auto; padding:0 20px 64px}
+.card{
+background:var(--card); border:1px solid var(--rule); border-radius:12px;
+padding:28px; margin:-28px 0 0; box-shadow:0 2px 14px rgba(0,0,0,.06);
+}
+.btns{display:flex; flex-wrap:wrap; gap:12px; margin:22px 0 6px}
+.btn{
+flex:1 1 240px; display:block; text-align:center; text-decoration:none;
+padding:15px 18px; border-radius:9px; font-weight:700; font-size:16px;
+}
+.btn.primary{background:var(--navy); color:#F5F6F1}
+.btn.secondary{background:transparent; color:var(--navy); border:2px solid var(--navy)}
+@media (prefers-color-scheme: dark){
+:root:not([data-theme="light"]) .btn.primary{background:var(--gold); color:#14181f}
+:root:not([data-theme="light"]) .btn.secondary{color:var(--gold); border-color:var(--gold)}
+}
+.note{color:var(--mute); font-size:14.5px; margin:10px 0 0}
+h2{font-size:20px; margin:38px 0 12px}
+ul{margin:0; padding-left:20px}
+li{margin:7px 0}
+.shot{width:100%; height:auto; border:1px solid var(--rule); border-radius:8px; margin-top:12px}
+.offer{
+background:var(--card); border:1px solid var(--rule); border-top:4px solid var(--navy);
+border-radius:12px; padding:28px; margin-top:44px; box-shadow:0 2px 14px rgba(0,0,0,.06);
+}
+.offer-kicker{color:var(--navy); font-weight:700; letter-spacing:.12em; font-size:12.5px; text-transform:uppercase}
+.offer h2{margin:10px 0 10px; font-size:24px}
+.offer p{margin:0 0 16px}
+.offer ul{margin:0 0 22px; padding-left:20px}
+.offer-btn{
+display:block; text-align:center; text-decoration:none; background:var(--navy);
+color:#F5F6F1; padding:16px 18px; border-radius:9px; font-weight:700; font-size:16.5px;
+}
+.offer-btn:hover{background:#25553F}
+.offer-note{color:var(--mute); font-size:14.5px; margin:12px 0 0; text-align:center}
+@media (prefers-color-scheme: dark){
+:root:not([data-theme="light"]) .offer{border-top-color:var(--gold)}
+:root:not([data-theme="light"]) .offer-kicker{color:var(--gold)}
+:root:not([data-theme="light"]) .offer-btn{background:var(--gold); color:#14181f}
+:root:not([data-theme="light"]) .offer-btn:hover{background:#b3c9ba}
+}
+footer{color:var(--mute); font-size:14px; text-align:center; padding:26px 20px 40px}
+footer a{color:inherit}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="kicker">Free Printable</div>
-  <h1>Homeschool Attendance Tracker</h1>
-  <p>A whole school year on one page. Undated, so it works for any year.</p>
+<div class="kicker">Free Printable</div>
+<h1>Homeschool Attendance Tracker</h1>
+<p>A whole school year on one page. Undated, so it works for any year.</p>
 </header>
 
 <div class="wrap">
-  <div class="card">
-    <strong>Download it free — no email required.</strong>
-    <div class="btns">
-      <a class="btn primary" href="homeschool-attendance-tracker-PRINTABLE.pdf" download>Printable PDF</a>
-      <a class="btn secondary" href="homeschool-attendance-tracker-FILLABLE.pdf" download>Fillable PDF</a>
-    </div>
-    <p class="note">The printable is for pen and paper. The fillable one lets you type straight into
-      the grid on a computer or tablet and save it as you go.</p>
-  </div>
+<div class="card">
+<strong>Download it free — no email required.</strong>
+<div class="btns">
+<a class="btn primary" href="homeschool-attendance-tracker-PRINTABLE.pdf" download>Printable PDF</a>
+<a class="btn secondary" href="homeschool-attendance-tracker-FILLABLE.pdf" download>Fillable PDF</a>
+</div>
+<p class="note">The printable is for pen and paper. The fillable one lets you type straight into
+the grid on a computer or tablet and save it as you go.</p>
+</div>
 
-  <h2>What it does</h2>
-  <ul>
-    <li>Twelve months across, thirty-one days each — a full year without turning a page.</li>
-    <li>Undated. Start in August, start in January, start whenever you actually started.</li>
-    <li>Running <em>days</em> and <em>hours</em> columns, because states count different things.</li>
-    <li>A <em>days required</em> box at the top so your own state's target stays in front of you.</li>
-    <li>Mark days however you like — a tick, H for a half day, F for a field trip.</li>
-  </ul>
+<h2>What it does</h2>
+<ul>
+<li>Twelve months across, thirty-one days each — a full year without turning a page.</li>
+<li>Undated. Start in August, start in January, start whenever you actually started.</li>
+<li>Running <em>days</em> and <em>hours</em> columns, because states count different things.</li>
+<li>A <em>days required</em> box at the top so your own state's target stays in front of you.</li>
+<li>Mark days however you like — a tick, H for a half day, F for a field trip.</li>
+</ul>
 
-  <h2>A note on requirements</h2>
-  <p>Attendance rules differ from state to state. Some count days, some count instructional hours,
-    and some ask for neither. This sheet is built to record either one, but it is a record-keeping
-    tool and not legal guidance — check your own state's requirement before you rely on it.</p>
+<h2>A note on requirements</h2>
+<p>Attendance rules differ from state to state. Some count days, some count instructional hours,
+and some ask for neither. This sheet is built to record either one, but it is a record-keeping
+tool and not legal guidance — check your own state's requirement before you rely on it.</p>
 
-  <img class="shot" src="preview.png" alt="The attendance tracker sheet: twelve month rows, thirty-one day columns, and totals for days and hours.">
+<img class="shot" src="preview.png" alt="The attendance tracker sheet: twelve month rows, thirty-one day columns, and totals for days and hours.">
 
-  <div class="shop">
-    <h2>If you need more than attendance</h2>
-    <p>This sheet came out of a larger planner. The full
-      <a href="https://midwestmade4u.etsy.com">MidwestMade4U</a> homeschool planner adds an hour log,
-      portfolio pages, reading records and subject planning — 478 undated pages, printable and
-      fillable. The tracker above stays free either way.</p>
-  </div>
+<div class="offer">
+<div class="offer-kicker">If you need more than attendance</div>
+<h2>The full homeschool planner</h2>
+<p>This sheet came out of a larger planner. The full version adds an hour log, portfolio pages,
+reading records and subject planning — <strong>478 undated pages</strong>, printable and fillable,
+and it never expires.</p>
+<ul>
+<li>Attendance <em>and</em> instructional-hour logs</li>
+<li>Portfolio and reading records</li>
+<li>Subject, unit and year planning</li>
+<li>Undated — start any week, use it every year</li>
+</ul>
+<a class="offer-btn" href="https://www.etsy.com/listing/4557685159/undated-homeschool-planner-printable-478">See the full planner on Etsy &rarr;</a>
+<p class="offer-note">Instant download. The tracker above stays free either way.</p>
+</div>
 </div>
 
 <footer>
-  MidwestMade4U · Wisconsin · Share this page with any homeschool family who needs it.
+MidwestMade4U · Wisconsin · <a href="https://midwestmade4u.etsy.com">Shop on Etsy</a> · Share this page with any homeschool family who needs it.
 </footer>
 
 </body>
